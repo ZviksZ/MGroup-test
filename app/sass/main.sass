@@ -1,0 +1,169 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+::selection
+	background-color: $accent
+	color: #fff
+
+ul
+	margin: 0
+	padding: 0	
+
+.header	
+	.header-events
+		line-height: 288px
+		color: #333
+		font-size: 68px
+		font-weight: 700
+		text-transform: uppercase	
+		text-align: center		
+	.header-city
+		.header-city__list
+			text-align: center
+			li
+				display: inline-block
+				margin-right: 30px					
+				a
+					display: block
+					text-decoration: none
+					color: #333
+					box-sizing: border-box
+					padding: 0 5px 26px
+					font-size: 20px
+					font-weight: 400
+					&:hover
+						border-bottom: 4px solid #487fc0
+						color: #487fc0
+						padding-bottom: 22px
+		.header-city__date
+			text-align: right
+			color: #333
+			font-size: 20px
+			font-weight: 400
+			text-decoration: none
+			margin-right: 40px
+			&:hover
+				color: #487fc0
+
+.content
+	background-color: #f8f8f9
+	.content-date
+		line-height: 215px
+		opacity: 0.6
+		color: #151525
+		font-size: 20px
+		font-weight: 400
+		text-align: center
+	.container
+		background-color: #fff
+		-webkit-box-shadow: 0px 0px 17px 1px rgba(0,0,0,0.43)
+		-moz-box-shadow: 0px 0px 17px 1px rgba(0,0,0,0.43)
+		box-shadow: 0px 0px 17px 1px rgba(0,0,0,0.43)
+		padding: 0
+		margin-bottom: 10px
+		.content-img
+			height: 350px
+			padding-right: 0
+		.content-info
+			padding-left: 35px	
+			padding-right: 35px	
+			h2
+				color: #333
+				font-size: 28px
+				font-weight: 700
+				text-transform: uppercase
+				margin: 36px 0 30px
+			p
+				color: #666
+				font-family: Arial, Helvetica, sans-serif
+				font-size: 18px
+				font-weight: light
+				line-height: 24px
+				margin: 0 0 15px 0
+			.content-social
+				margin-bottom: 20px
+				a
+					display: inline-block
+					margin-right: 10px
+					&:last-child
+						margin-right: 0
+		.content-time
+			border-left: 2px solid #e6e8e9	
+			height: 350px
+			padding-left: 44px	
+			ul
+				margin: 80px 0 45px
+				li
+					padding-left: 50px
+					list-style-type: none
+					color: #333
+					font-size: 18px
+					font-weight: 400
+					line-height: 44px	
+					font-family: Arial, Helvetica, sans-serif	
+			a
+				display: block
+				width: 220px
+				height: 50px
+				background-color: black				
+				border-radius: 3px
+				font-family: Arial, Helvetica, sans-serif
+				color: #fff
+				font-size: 18px
+				font-weight: 500
+				line-height: 50px
+				text-align: center
+				margin: 0
+@import "media" // Всегда в конце
