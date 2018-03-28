@@ -61,17 +61,26 @@ ul
 	margin: 0
 	padding: 0	
 
+.container
+	width: 1120px
+	margin: 0 auto
+
 .header	
 	.header-events
-		line-height: 288px
+		line-height: 288px		
 		color: #333
 		font-size: 68px
-		font-weight: 700
+		font-weight: 800
 		text-transform: uppercase	
 		text-align: center		
-	.header-city
+	.header-city	
+		height: 50px	
 		.header-city__list
-			text-align: center
+			margin-left: 220px
+			height: 50px
+			display: inline-block
+			vertical-align: top
+			margin-right: 50px
 			li
 				display: inline-block
 				margin-right: 30px					
@@ -83,19 +92,28 @@ ul
 					padding: 0 5px 26px
 					font-size: 20px
 					font-weight: 400
+					line-height: 17px
 					&:hover
 						border-bottom: 4px solid #487fc0
 						color: #487fc0
-						padding-bottom: 22px
+			.active
+				border-bottom: 4px solid #487fc0
+				color: #487fc0		
 		.header-city__date
-			text-align: right
+			display: inline-block
+			vertical-align: middle
+			height: 50px
 			color: #333
 			font-size: 20px
 			font-weight: 400
 			text-decoration: none
-			margin-right: 40px
+			margin-right: 58px
+			line-height: 17px
 			&:hover
 				color: #487fc0
+		.header-city__search
+			position: relative	
+			top: -5px
 
 .content
 	background-color: #f8f8f9
@@ -111,64 +129,73 @@ ul
 		-webkit-box-shadow: 0px 0px 17px 1px rgba(0,0,0,0.43)
 		-moz-box-shadow: 0px 0px 17px 1px rgba(0,0,0,0.43)
 		box-shadow: 0px 0px 17px 1px rgba(0,0,0,0.43)
-		padding: 0
+		// padding: 0
 		margin-bottom: 10px
-		.content-img
+		.content-block
 			height: 350px
-			padding-right: 0
-		.content-info
-			padding-left: 35px	
-			padding-right: 35px	
-			h2
-				color: #333
-				font-size: 28px
-				font-weight: 700
-				text-transform: uppercase
-				margin: 36px 0 30px
-			p
-				color: #666
-				font-family: Arial, Helvetica, sans-serif
-				font-size: 18px
-				font-weight: light
-				line-height: 24px
-				margin: 0 0 15px 0
-			.content-social
-				margin-bottom: 20px
+			display: grid
+			grid-template: 350px / 384px 416px 320px
+			.content-info
+				width: 416px
+				padding-left: 48px	
+				h2
+					color: #333
+					font-size: 28px
+					font-weight: 700
+					text-transform: uppercase
+					margin: 44px 0 20px
+					line-height: 1
+				p
+					color: #666
+					width: 312px
+					font-size: 18px
+					font-weight: light
+					line-height: 24px
+					margin: 0
+					margin-bottom: 27px
+				.content-social
+					a
+						display: inline-block
+						margin-right: 12px
+						&:last-child
+							margin-right: 0
+			.content-time
+				border-left: 1px solid #e6e8e9					
+				padding-left: 44px	
+				ul
+					margin: 75px 0 45px
+					li
+						padding-left: 50px
+						list-style-type: none
+						color: #333
+						font-size: 18px
+						font-weight: 400
+						line-height: 44px
+						position: relative
+						img
+							position: absolute
+							left: 0	
+							top: 50%
+							transform: translate(0, -50%)
+						.img_center
+							transform: translate(4px, -50%)					
 				a
 					display: inline-block
-					margin-right: 10px
-					&:last-child
-						margin-right: 0
-		.content-time
-			border-left: 2px solid #e6e8e9	
-			height: 350px
-			padding-left: 44px	
-			ul
-				margin: 80px 0 45px
-				li
-					padding-left: 50px
-					list-style-type: none
-					color: #333
+					padding: 0 48px
+					background-color: black				
+					border-radius: 3px
+					border: 2px solid #151525					
+					color: #fff
 					font-size: 18px
-					font-weight: 400
-					line-height: 44px	
-					font-family: Arial, Helvetica, sans-serif	
-			a
-				display: inline-block
-				padding: 0 48px
-				background-color: black				
-				border-radius: 3px
-				border: 2px solid #151525
-				font-family: Arial, Helvetica, sans-serif
-				color: #fff
-				font-size: 18px
-				font-weight: 500
-				line-height: 46px
-				text-align: center
-				margin: 0
-				text-decoration: none
-				&:hover
-					background-color: #fff
-					color: black
+					font-weight: 500
+					line-height: 46px
+					text-align: center
+					margin: 0
+					text-decoration: none
+					&:hover
+						background-color: #fff
+						color: black
+				
+
 
 @import "media" // Всегда в конце
