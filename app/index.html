@@ -50,9 +50,18 @@
 					</li>
 				</ul>
 				<a href="" class="header-city__date">Date</a>
+				<form action="" class="header-filter" id="header-date">			
+					<input placeholder="From" class="textbox-n" type="text" onfocus="(this.type='date')"  id="date">
+					<input placeholder="Till" class="textbox-n" type="text" onfocus="(this.type='date')"  id="date">
+					<a href="">Update filter</a>
+				</form>
 				<a href="" class="header-city__search">
-					<img src="img/search-icon.png" alt="">
-				</a>		
+					<i class="fa fa-search" aria-hidden="true"></i>
+				</a>
+				<form action="" class="header-filter header-filter__search" id="header-search">			
+					<input placeholder="...." class="textbox-n" type="text" onfocus="(this.type='date')"  id="date">					
+					<a href="">Search</a>
+				</form>		
 			</div>
 		</div>
 		
@@ -89,11 +98,40 @@
 							13:00 - 14:00
 						</li>
 					</ul>
-					<a href="" class="content-btn" id="btn_calendar">Add to calendar</a>			
+					<a href="" class="content-btn" id="btn_calendar">Add to calendar
+						<ul class="content-btn__add">
+							<li>
+								<a href="">
+									<img src="img/Google.png" alt="">
+									Google Calendar
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="img/Apple.png" alt="">
+									Apple Calendar
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="img/Outlook.png" alt="">
+									Outlook.com
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="img/Other-Calander.png" alt="">
+									Other Calendar
+								</a>
+							</li>
+						</ul>						
+					</a>			
 				</div>			
 			</div>			
 		</div>
 	</section>
+		
+
 	
 
 

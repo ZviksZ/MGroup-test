@@ -69,7 +69,7 @@
 			.content-block
 				height: auto
 				display: grid
-				grid-template: auto 100px / 250px auto
+				grid-template: auto auto / 250px auto
 				grid-template-areas: "img info" "time time"
 				.content-img
 					grid-area: img
@@ -86,20 +86,31 @@
 						margin-bottom: 20px	
 				.content-time
 					grid-area: time
+					padding-left: 0
 					ul
 						display: inline-block
 						margin-top: 25px
-						margin-bottom: 30px	
-						margin-right: 30px											
+						margin-bottom: 20px	
+						margin-right: 30px	
+						padding-left: 44px										
 						li
 							padding-left: 40px
 							display: inline-block
 							margin-right: 15px
-					a
-						padding: 0 40px
+					a#btn_calendar
 						font-size: 16px
-						display: inline-block
-
+					.content-btn__add	
+						height: auto
+						position: relative
+						padding-left: 0
+						width: 100%
+						margin: 0 auto 10px	
+						text-align: center
+						li
+							display: inline-block
+							margin-right: 0
+							a
+								padding-right: 20px	
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
@@ -166,22 +177,37 @@
 						margin-top: 25px
 						margin-bottom: 30px	
 						margin-right: 30px	
-						text-align: center										
+						text-align: center	
+						padding-left: 0									
 						li
 							padding-left: 40px
 							display: inline-block
 							margin-right: 15px
-					a
+					a#btn_calendar
 						padding: 0 40px
 						font-size: 16px
-						display: inline-block
-						margin-bottom: 30px	
+						margin-bottom: 15px	
+					.content-btn__add	
+						height: auto
+						position: relative
+						padding-left: 0
+						width: 100%
+						margin: 0 auto 10px	
+						text-align: center
+						li
+							display: inline-block
+							width: 50%
+							margin-right: 0
+							padding-right: 0
+							padding-left: 0
+							a
+								padding-right: 20px
+
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width: 320px) and (max-width : 480px)
-	body
-		margin: 0
+	
 	.container
 		width: 95%
 		margin: 0 auto
@@ -254,11 +280,26 @@
 							padding-left: 40px
 							display: inline-block
 							margin-right: 15px
-					a
+					a#btn_calendar
 						padding: 0 40px
 						font-size: 16px
 						display: inline-block
 						margin-bottom: 30px	
+					.content-btn__add	
+						height: auto
+						position: relative
+						padding-left: 0
+						width: 100%
+						margin: 0 auto 10px	
+						text-align: center
+						li
+							display: inline-block
+							width: 70%
+							margin-right: 0
+							padding-right: 0
+							padding-left: 0
+							a
+								padding-right: 20px	
 
 
 

@@ -60,6 +60,8 @@ body
 ul
 	margin: 0
 	padding: 0	
+.fa
+	font-family: Fontawesome	
 
 .container
 	width: 1120px
@@ -74,7 +76,8 @@ ul
 		text-transform: uppercase	
 		text-align: center		
 	.header-city	
-		height: 50px	
+		height: 50px
+		position: relative	
 		.header-city__list
 			margin-left: 220px
 			height: 50px
@@ -96,13 +99,12 @@ ul
 					&:hover
 						border-bottom: 4px solid #487fc0
 						color: #487fc0
-			.active
-				border-bottom: 4px solid #487fc0
-				color: #487fc0		
+				.active
+					border-bottom: 4px solid #487fc0
+					color: #487fc0							
 		.header-city__date
 			display: inline-block
-			vertical-align: middle
-			height: 50px
+			padding: 0 5px 26px
 			color: #333
 			font-size: 20px
 			font-weight: 400
@@ -110,10 +112,80 @@ ul
 			margin-right: 58px
 			line-height: 17px
 			&:hover
+				border-bottom: 4px solid #487fc0
 				color: #487fc0
+		.header-filter
+			display: none
+			position: absolute
+			right: 0
+			margin-top: 2px
+			width: 350px
+			height: 170px
+			background-color: white	
+			z-index: 1
+			text-align: center
+			input
+				width: 140px
+				height: 50px
+				border: 1px solid #e1e1e1
+				margin-top: 30px
+				box-sizing: border-box
+				padding-left: 20px
+				&:first-child
+					margin-right: 7px				
+			::-webkit-input-placeholder
+				color: #333
+				font-size: 18px
+				font-weight: 400 
+			::-moz-placeholder
+				color: #333 
+				font-size: 18px
+				font-weight: 400        
+			:-moz-placeholder
+				color: #333 
+				font-size: 18px
+				font-weight: 400          
+			:-ms-input-placeholder
+				color: #333 
+				font-size: 18px
+				font-weight: 400     		
+			a
+				display: inline-block
+				text-decoration: none
+				width: 290px
+				height: 50px
+				background-color: black
+				border: 2px solid #151525
+				border-radius: 3px
+				line-height: 46px	
+				margin-top: 10px
+				color: white
+				font-size: 18px
+				font-weight: 500
+				box-sizing: border-box	
+		
 		.header-city__search
-			position: relative	
-			top: -5px
+			display: inline-block
+			text-decoration: none
+			// padding-bottom: 20px
+			// &:hover
+			// 	border-bottom: 4px solid #487fc0
+			i.fa.fa-search
+				color: #333
+				transform: scale(-1, 1)
+				font-size: 33px
+				line-height: 17px
+				padding-bottom: 29px
+				&:hover
+					color: #487fc0
+					border-bottom: 4px solid #487fc0
+		.header-filter__search
+			input
+				margin-right: 0
+				margin-left: 5px
+				width: 290px					
+			
+
 
 .content
 	background-color: #f8f8f9
@@ -130,7 +202,7 @@ ul
 		-moz-box-shadow: 0px 0px 17px 1px rgba(0,0,0,0.43)
 		box-shadow: 0px 0px 17px 1px rgba(0,0,0,0.43)
 		// padding: 0
-		margin-bottom: 200px
+		margin-bottom: 300px
 		.content-block
 			height: 350px
 			display: grid
@@ -161,6 +233,7 @@ ul
 			.content-time
 				border-left: 1px solid #e6e8e9					
 				padding-left: 44px	
+				position: relative
 				ul
 					margin: 75px 0 45px
 					li
@@ -178,10 +251,10 @@ ul
 							transform: translate(0, -50%)
 						.img_center
 							transform: translate(4px, -50%)					
-				a
+				a#btn_calendar
 					display: inline-block
 					position: relative
-					padding: 0 48px
+					width: 220px
 					background-color: black				
 					border-radius: 3px
 					border: 2px solid #151525					
@@ -194,8 +267,41 @@ ul
 					text-decoration: none
 					&:hover
 						background-color: #fff
-						color: black
-				
+						color: black						
+				.content-btn__add
+					width: 220px
+					height: 210px
+					background-color: white
+					border: 1px solid #e6e8e9
+					border-radius: 3px
+					display: none
+					font-size: 18px
+					line-height: 50px
+					margin: 0
+					position: absolute
+					z-index: 1
+					a#btn_calendar
+						display: none
+					li
+						padding: 0	
+
+						a
+							width: 100%
+							height: 50px
+							line-height: 50px
+							color: #666
+							font-weight: 400
+							text-decoration: none
+							padding-left: 52px
+							cursor: pointer
+							&:hover
+								color: black
+								font-weight: 700
+							img
+								padding-left: 14px
+							
+								
+
 
 
 @import "media" // Всегда в конце
